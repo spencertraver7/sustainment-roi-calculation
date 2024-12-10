@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ROI Calculator</h1>
+        <form id="roiCalculator">
+            <!-- Input Fields -->
+            <div class="form-group">
+                <label for="suppliers">Number of Suppliers:</label>
+                <input type="number" id="suppliers" name="suppliers" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quotes">Number of Quotes Per Month:</label>
+                <input type="number" id="quotes" name="quotes" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pos">Number of POs Per Month:</label>
+                <input type="number" id="pos" name="pos" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="teamSize">Number of Team Members:</label>
+                <input type="number" id="teamSize" name="teamSize" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hourlyRate">Average Hourly Rate ($):</label>
+                <input type="number" id="hourlyRate" name="hourlyRate" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="errors">Number of Errors Per Month:</label>
+                <input type="number" id="errors" name="errors" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="costPerError">Cost Per Error ($):</label>
+                <input type="number" id="costPerError" name="costPerError" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="softwareCost">Software Cost ($/month):</label>
+                <input type="number" id="softwareCost" name="softwareCost" step="0.01" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" id="calculateButton">Calculate ROI</button>
+        </form>
+
+        <!-- Output Section -->
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <p id="savings"></p>
+            <p id="roiPercentage"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
